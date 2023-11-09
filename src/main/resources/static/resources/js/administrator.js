@@ -86,6 +86,7 @@ function renderGrid({grid, totalPages}, currentPage){
     htmlString = htmlString + row;    
     }
     $('.table-content tbody').html(htmlString);
+    editButtonListener();
 }
 
 function addNewAdminButtonListener(){
@@ -168,3 +169,53 @@ function saveButtonListener(){
     });
 }
 
+function editButtonListener(){
+    $('.edit-button').click(function(event){
+        addHtmlEdit();
+        $('.modal-layer').addClass('modal-layer--opened');
+        $('.form-dialog').addClass('popup-dialog--opened');
+
+    });
+}
+
+function addHtmlEdit(){
+    $('.modal-layer').html(`<div class="popup-dialog  form-dialog">
+    <header>
+        <h2>Change Password</h2>
+    </header>
+    <form>
+        <table>
+            <tbody>
+            <tr>
+                <td>
+                    <input type="text" placeholder = "Old Password" class="form-old-password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" placeholder = "New Password" class="form-new-password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" placeholder="Confirm Password" class="form-confirm-password">
+                </td>
+            </tr>
+
+    
+            </tbody>
+        </table>
+        <a class="default-button save-password" href="javascript:;"> Save</a>
+        <a class="default-button close" href="javascript:;"> Close</a>
+    </form>
+
+</div>
+
+`)
+closeButtonListener();
+// saveButtonListener();
+}
+
+ 

@@ -7,7 +7,7 @@ html,body{
 .main-wrapper{
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 70px 1fr;
     grid-template-areas: "side-bar header"
                          "side-bar main";
     height: 100%;
@@ -16,8 +16,8 @@ html,body{
 .main-wrapper .side-navbar{
     grid-area: side-bar;
     background-color: #3D5654;
-    height: 100%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
+    margin-top:  20px;
 }
 
 .side-navbar .side-menu{
@@ -145,6 +145,7 @@ html,body{
 .table-content td{
     text-align: center;
     padding: 5px;
+    font-size: 15px;
 }
 
 .create-button{
