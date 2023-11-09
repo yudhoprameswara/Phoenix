@@ -281,3 +281,20 @@ div.modal-layer--opened{
     border: solid 0.5px #8080806b;
     border-radius: 10px;
 }
+
+.detail-room-inventory{
+    width: 190px;
+    padding: 10px;
+}
+
+.remove-button{
+    background: #be5151;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    color: white;
+    padding: 2px;
+    font-size: small;
+}
